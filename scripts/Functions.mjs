@@ -31,7 +31,6 @@ export async function creatHeaderAndFooter(headerPath, footerPath){
 
 
 export function responsiveNavbar(button){
-    console.log(button);
 
     button.addEventListener('click', changeStyle);
 
@@ -40,4 +39,14 @@ export function responsiveNavbar(button){
         navUl.classList.toggle('responsive');
     }
     
+}
+
+export async function getMovieApiData(url){
+
+    const data = await fetch(url);
+    const result =  await data.json();
+
+    console.log(result);
+    
+    return result;
 }
