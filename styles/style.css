@@ -56,6 +56,7 @@ Header styling small view
     list-style-type: none;
     padding: 1em;
     transition: transform 0.3s ease;
+    border-radius: .5em;
     flex: 1;
 }
 
@@ -132,9 +133,24 @@ Footer styling small view
 }
 
 
+/*--------------------------------
+Main styling small view
+---------------------------------*/
+.movieCatalogContainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
 
+.movieCatalog{
+    max-width: 200px;
+}
 
-
+.movieImg{
+    width: 100%;
+}
 
 
 /*--------------------------------
