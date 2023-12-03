@@ -4,7 +4,7 @@ function movieItemTemplate(movie) {
     const newItem = `
     <div class="movieCatalog">
     <img class="movieImg" src="http://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
-    <p>${movie.title}</p>
+    <p class="movieTitle">${movie.title}</p>
     </div>
     `;
   
@@ -22,10 +22,7 @@ function movieItemTemplate(movie) {
 
       const movieItems = movieData.results;
 
-      console.log(movieItems);
-
       const htmlItems = movieItems.map((movie) => movieItemTemplate(movie));
-      console.log(htmlItems);
       document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
     }
   }

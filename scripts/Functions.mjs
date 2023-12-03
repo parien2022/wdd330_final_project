@@ -1,5 +1,3 @@
-
-
 export async function getTemplate(path){
 
     const html = await fetch(path);

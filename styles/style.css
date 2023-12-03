@@ -136,20 +136,37 @@ Footer styling small view
 /*--------------------------------
 Main styling small view
 ---------------------------------*/
+.mainTitle{
+    text-align: center;
+    background-color: #012a3c;
+    color: #ffffff;
+    padding: .2em;
+    margin: .5em;
+    border-radius: .3em;
+}
+
 .movieCatalogContainer{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    gap: 3em;
+    gap: 2em;
 }
 
 .movieCatalog{
     max-width: 200px;
+    border: #012a3c 1px solid;
+    border-radius: .5em;
+    text-align: center;
+}
+
+.movieTitle{
+    margin: .5em;
 }
 
 .movieImg{
     width: 100%;
+    border-radius: .5em;
 }
 
 

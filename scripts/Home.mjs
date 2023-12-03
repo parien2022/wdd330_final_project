@@ -1,7 +1,6 @@
 import {creatHeaderAndFooter} from './Functions.mjs';
 import MovieCatalog from './MovieCatalog.mjs';
 
-
 const header = '/wdd330_final_project/snippets/header.html';
 const footer = '/wdd330_final_project/snippets/footer.html';
 
