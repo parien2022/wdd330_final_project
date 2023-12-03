@@ -56,7 +56,6 @@ Header styling small view
     list-style-type: none;
     padding: 1em;
     transition: transform 0.3s ease;
-    width: 100%;
     flex: 1;
 }
 
@@ -68,6 +67,7 @@ Header styling small view
 
 a{
     text-decoration: none;
+    display: contents;
 }
 
 .navMenuContainer{
@@ -147,8 +147,11 @@ Screen Greater than 768px
         gap: 3em;
     }
 
-    .navUl.responsive {
-        display: none;
+    .navClass{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1 auto;
     }
 
     .navUl{
@@ -156,16 +159,11 @@ Screen Greater than 768px
         flex-flow: row;
         align-items: center;
         flex: 1 auto;
-    }
-
-    .navLi{
-        width: auto;
+        border-radius: 0.5em;
     }
 
     .navMenuContainer{
         display: none;
     }
-
-    
 
 }
