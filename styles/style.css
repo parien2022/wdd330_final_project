@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Ephesis&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Varela Round", Helvetica, sans-serif;
+}
+
+/*--------------------------------
+Header styling small view
+---------------------------------*/
+.headerTag{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+.headerImgContainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImg{
+    max-width: 150px;
+}
+
+.logoTitle{
+    color: #FA824C;
+    margin: 0;
+    font-family: "Ephesis", Helvetica, sans-serif;
+}
+
+.navUl{
+    display: none;
+    padding: 0px;
+    border-radius: .5em;
+}
+
+.navUl.responsive{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navLi{
+    background-color: #1A57A8;
+    color: #ffffff;
+    list-style-type: none;
+    padding: 1em;
+    transition: transform 0.3s ease;
+    width: 100%;
+    flex: 1;
+}
+
+.navLi:hover{
+    background-color: #FA824C;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+a{
+    text-decoration: none;
+}
+
+.navMenuContainer{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #012a3c;
+    padding:  .4em .7em .4em .7em;
+    margin:  0;
+    border-radius: .5em;
+    color: #ffffff;
+}
+
+#navMenu{
+    margin: 0;
+}
+
+#burger{
+    font-size: 2em;
+}
+
+.navMenuButton{
+    border: none;
+    border-radius: .2em;
+    padding: 0 .3em 0 .3em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navMenuButton:hover{
+    transform: scale(1.2);
+}
+
+
+/*--------------------------------
+Footer styling small view
+---------------------------------*/
+
+.fContainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.footerImgContainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerInfContainer{
+    text-align: center;
+    padding: 1em;
+}
+
+.footerLogoImg{
+    max-width: 100px;
+}
+
+
+
+
+
+
+
+/*--------------------------------
+Screen Greater than 768px
+---------------------------------*/
+@media only screen and (min-width: 768px) {
+
+    .headerTag{
+        flex-flow: row;
+        gap: 3em;
+    }
+
+    .navUl.responsive {
+        display: none;
+    }
+
+    .navUl{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        flex: 1 auto;
+    }
+
+    .navLi{
+        width: auto;
+    }
+
+    .navMenuContainer{
+        display: none;
+    }
+
+    
+
+}
