@@ -3,7 +3,7 @@ import {getMovieApiData} from './Functions.mjs';
 function movieItemTemplate(movie) {
     const newItem = `
     <div class="movieCatalog">
-    <img class="movieImg" src="http://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
+    <img class="movieImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
     <p class="movieTitle">${movie.title}</p>
     </div>
     `;
