@@ -1,3 +1,5 @@
+//Common and shared functions
+
 export async function getTemplate(path){
 
     const html = await fetch(path);
@@ -44,5 +46,13 @@ export async function getMovieApiData(url){
     const data = await fetch(url);
     const result =  await data.json();
     
+    return result;
+}
+
+export function getParameter(parameter){
+    const paramString = window.location.search;
+    const paramURL = new URLSearchParams(paramString);
+    const result = paramURL.get(parameter);
+
     return result;
 }

@@ -34,7 +34,7 @@ Header styling small view
     max-width: 150px;
 }
 
-.logoTitle{
+.logoTitle, .footerLogoTitle{
     color: #8e3912;
     /*color: #FA824C;*/
     margin: 0;
@@ -130,14 +130,13 @@ Main styling small view
     align-items: center;
     justify-content: center;
     flex: 1 auto;
+    margin: .5em;
     /*gap: 2em;*/
 }
 
 .movieCatalog{
     max-width: 300px;
-    /*border: #012a3c 1px solid;*/
-    border-bottom-left-radius: .5em;
-    border-bottom-right-radius: .5em;
+    border-radius: .5em;
     background-color: #012a3c;
     text-align: center;
     font-size: .7em;
@@ -150,18 +149,66 @@ Main styling small view
 }
 
 .movieTitle{
-    margin: .2em;
+    /*margin: .2em;*/
 }
 
 .movieImg{
     width: 100%;
     min-height: 450px;
-    /*border-radius: .5em;*/
+    min-width: 300px;
+    border-radius: .5em;
+}
+
+.moviesLink{
+    color: #ffffff;
+}
+
+.movieInfoContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+.movieImgContainer{
+    max-width: 300px;
+    border-radius: .5em;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 1em;
+}
+.movieImgContainer:hover{
+}
+
+.MovieDetailsContainer{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: left;
+    margin: 2em;
+    color: #ffffff;
+}
+
+.videoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5em;
+}
+
+.movieTrailer{
+    width: 350px;
+    height: 200px;
 }
 
 /*--------------------------------
 Footer styling small view
 ---------------------------------*/
+
+.footerTag{
+    background-color: #011822;
+}
 
 .fContainer{
     display: flex;
@@ -181,12 +228,18 @@ Footer styling small view
 .footerInfContainer{
     text-align: center;
     padding: 1em;
+    color: #ffffff;
 }
 
 .footerLogoImg{
     max-width: 100px;
+    border-radius: .5em;
+    margin: .7em;
 }
 
+.footerLogoTitle{
+    color: #b15d36;
+}
 
 
 /*--------------------------------
@@ -233,4 +286,22 @@ Main styling Large view
         margin: 0;
     }
 
+    .movieInfoContainer{
+        flex-flow: row;
+        align-items: normal;
+    }
+
+    .movieTrailer{
+        width: 700px;
+        height: 430px;
+    }
+
+
+
+/*--------------------------------
+Footer styling Large view
+---------------------------------*/
+    .footerInfContainer{
+        text-align: left;
+    }
 }

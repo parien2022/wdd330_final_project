@@ -1,28 +1,34 @@
 import {getMovieApiData} from './Functions.mjs';
 
-function movieItemTemplate(movie) {
+//Using api url and parent selector builds a dynamic catalog of trending movies
+
+function movieTrendingTemplate(movie) {
     const newItem = `
     <div class="movieCatalog">
-    <img class="movieImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
-    <p class="movieTitle">${movie.title}</p>
+    <a class="moviesLink" href="/wdd330_final_project/movieInfo/index.html?movieId=${movie.id}"><img class="movieImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
+    <p class="movieTitle">${movie.title}</p></a>
     </div>
     `;
   
     return newItem;
   }
+
   
-  export  default class MovieCatalog {
-    constructor(url, parentSelector) {
+  
+  export default class MovieCatalog {
+    constructor(url, parentSelector = ".movieCatalogContainer") {
       this.url = url;
       this.parentSelector = parentSelector;
     }
     
     async renderMovieContents() {
       const movieData = await getMovieApiData(this.url);
+      return movieData;
+    }
 
-      const movieItems = movieData.results;
-
-      const htmlItems = movieItems.map((movie) => movieItemTemplate(movie));
+    buildTrendingMoviesCatalog(data){
+      const htmlItems = data.map((movie) => movieTrendingTemplate(movie));
       document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
     }
+
   }
