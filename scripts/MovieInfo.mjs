@@ -5,7 +5,7 @@ function buildSpecificMovieData(movie, newData){
     <img class="movieImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
     </div>
     <div class="MovieDetailsContainer">
-    <h2 class="movieTitle">${movie.title} (${movie.release_date.slice(0,4)})</h2>
+    <h2 class="movieTitleInfo">${movie.title} (${movie.release_date.slice(0,4)})</h2>
     <h3>${movie.tagline}</h3>
     <h5>Description</h5>
     <p>${movie.overview}</p>

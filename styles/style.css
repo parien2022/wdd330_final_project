@@ -149,7 +149,7 @@ Main styling small view
 }
 
 .movieTitle{
-    /*margin: .2em;*/
+    margin: .2em;
 }
 
 .movieImg{
@@ -178,8 +178,8 @@ Main styling small view
     transition: transform 0.3s ease;
     margin: 1em;
 }
-.movieImgContainer:hover{
-}
+/*.movieImgContainer:hover{
+}*/
 
 .MovieDetailsContainer{
     display: flex;
@@ -200,6 +200,52 @@ Main styling small view
 .movieTrailer{
     width: 350px;
     height: 200px;
+}
+
+.searchDiv{
+    text-align: center;
+    margin: 1em;
+}
+
+.searchLabel{
+    color: #ffffff;
+    text-align: center;
+}
+
+.searchInput{
+    padding: .2em;
+}
+
+.movieSearchContainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: .5em;
+    color: #ffffff;
+    gap: 0.5em;
+}
+
+.movieSearched{
+    max-width: 200px;
+    min-height: 340px;
+    border-radius: .5em;
+    background-color: #012a3c;
+    text-align: center;
+    font-size: .7em;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.movieSearched:hover{
+    transform: scale(1.1);
+}
+
+
+.movieImgSearch{
+    width: 100%;
+    min-width: 200px;
+    border-radius: .5em;
 }
 
 /*--------------------------------

@@ -56,3 +56,4 @@ export function getParameter(parameter){
 
     return result;
 }
+
