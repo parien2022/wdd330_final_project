@@ -15,9 +15,6 @@ inputElement.addEventListener("input", async (e) => {
     const movieFinder = new MovieFinder(".searchInput");
     const data = await movieFinder.getInputValue();
 
-    console.log(data);
-
-
     movieFinder.buildMovieSearched(data, ".movieSearchContainer");
 });
 

@@ -5,8 +5,10 @@ import {getMovieApiData} from './Functions.mjs';
 function movieTrendingTemplate(movie) {
     const newItem = `
     <div class="movieCatalog">
-    <a class="moviesLink" href="/wdd330_final_project/movieInfo/index.html?movieId=${movie.id}"><img class="movieImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
-    <p class="movieTitle">${movie.title}</p></a>
+      <div class="myListBack"></div>
+      <a class="myListLink" title="Add to wish list" href="#" data-movie-id="${movie.id}"><span class="myListCross">&#x271A;</span></a>
+      <a class="moviesLink" href="/wdd330_final_project/movieInfo/index.html?movieId=${movie.id}"><img class="movieImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
+      <p class="movieTitle">${movie.title}</p></a>
     </div>
     `;
   

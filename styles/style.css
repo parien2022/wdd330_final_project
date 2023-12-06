@@ -135,6 +135,7 @@ Main styling small view
 }
 
 .movieCatalog{
+    position: relative;
     max-width: 300px;
     border-radius: .5em;
     background-color: #012a3c;
@@ -146,6 +147,28 @@ Main styling small view
 
 .movieCatalog:hover{
     transform: scale(1.1);
+    z-index: 1;
+}
+
+.myListBack{
+    position: absolute;
+    background-color: #011822;
+    opacity: 0.3;
+    width: 100%;
+    max-width: 300px;
+    height: 22px;
+}
+
+.myListCross{
+    position: absolute;
+    left: 16.5em;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.myListLink{
+    color: #ffffff;
 }
 
 .movieTitle{
@@ -186,8 +209,11 @@ Main styling small view
     flex-flow: column wrap;
     align-items: stretch;
     justify-content: left;
-    margin: 2em;
+    margin: 1em;
+    padding: 1em;
     color: #ffffff;
+    background-color: #000d11;
+    border-radius: .5em;
 }
 
 .videoContainer{
@@ -195,6 +221,7 @@ Main styling small view
     align-items: center;
     justify-content: center;
     margin: .5em;
+    padding: 2em;
 }
 
 .movieTrailer{
@@ -246,6 +273,17 @@ Main styling small view
     width: 100%;
     min-width: 200px;
     border-radius: .5em;
+}
+
+
+.movieWishListContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: .5em;
+    color: #ffffff;
+    gap: 0.5em;
 }
 
 /*--------------------------------

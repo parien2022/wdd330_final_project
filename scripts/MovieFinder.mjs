@@ -24,10 +24,8 @@ export default class MovieFinder{
     async getInputValue(){
         
             const searchInput = document.querySelector(this.inputSelector);
-            console.log("Value: " + searchInput);
         
             const query = searchInput.value;
-            console.log("Query: " + query);
         
             let url = `https://api.themoviedb.org/3/search/movie?query=${query}&language=en-US&api_key=bb930f2a8368fa7042a25742d750800f`;
         
