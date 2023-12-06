@@ -23,7 +23,7 @@ document.querySelectorAll(".myListLink").forEach(link => {
     
         const movieId = link.getAttribute('data-movie-id');
 
-        const wishList = getLocalStorage("whisList") || [];
+        const wishList = getLocalStorage("wishList") || [];
 
         
         const movieIndex = data.findIndex((movie) => movie.id == movieId);
@@ -34,7 +34,7 @@ document.querySelectorAll(".myListLink").forEach(link => {
         if(!movieCheck){
 
             wishList.push(wishData);
-            setLocalStorage("whisList", wishList);
+            setLocalStorage("wishList", wishList);
 
             alert(`${wishData.title} successfully added to wish list.`);
 
