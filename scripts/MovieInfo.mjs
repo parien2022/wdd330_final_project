@@ -2,6 +2,8 @@
 function buildSpecificMovieData(movie, newData){
     const newItem = `
     <div class="movieImgContainer">
+    <div class="myListBack"></div>
+    <a class="myListLink" title="Add to wish list" href="#" data-movie-id="${movie.id}"><span class="myListCrossDetails">&#x271A;</span></a>
     <img class="movieImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
     </div>
     <div class="MovieDetailsContainer">

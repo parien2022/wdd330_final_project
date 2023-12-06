@@ -65,3 +65,66 @@ export function setLocalStorage(key, data){
 export function getLocalStorage(key){
     return JSON.parse(localStorage.getItem(key));
 }
+
+
+
+export function addToWishList(linkSelector, data){
+    document.querySelectorAll(linkSelector).forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+      
+          const movieId = link.getAttribute('data-movie-id');
+  
+          const wishList = getLocalStorage("wishList") || [];
+  
+          
+          const movieIndex = data.findIndex((movie) => movie.id == movieId);
+          const wishData = data[movieIndex];
+  
+          const movieCheck = wishList.find((movie) => movie.id == movieId);
+  
+          if(!movieCheck){
+  
+              wishList.push(wishData);
+              setLocalStorage("wishList", wishList);
+  
+              alert(`${wishData.title} successfully added to wish list.`);
+  
+          }else{
+  
+              alert(`${wishData.title} is already in wish list.`);
+          }
+          
+      });
+  });
+  }
+
+
+  export function addToWishListDetails(linkSelector, data){
+    document.querySelector(linkSelector).addEventListener('click', (e) => {
+          e.preventDefault();
+      
+          const movieId = linkSelector.getAttribute('data-movie-id');
+  
+          const wishList = getLocalStorage("wishList") || [];
+  
+          
+          const movieIndex = data.findIndex((movie) => movie.id == movieId);
+          const wishData = data[movieIndex];
+  
+          const movieCheck = wishList.find((movie) => movie.id == movieId);
+  
+          if(!movieCheck){
+  
+              wishList.push(wishData);
+              setLocalStorage("wishList", wishList);
+  
+              alert(`${wishData.title} successfully added to wish list.`);
+  
+          }else{
+  
+              alert(`${wishData.title} is already in wish list.`);
+          }
+          
+      });
+}

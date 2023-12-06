@@ -1,4 +1,4 @@
-import {getMovieApiData} from './Functions.mjs';
+import {getMovieApiData, setLocalStorage, getLocalStorage} from './Functions.mjs';
 
 //Using api url and parent selector builds a dynamic catalog of trending movies
 

@@ -1,6 +1,6 @@
 //this is for displaying all movies and serach input
 
-import {creatHeaderAndFooter} from './Functions.mjs';
+import {creatHeaderAndFooter, addToWishList} from './Functions.mjs';
 import MovieFinder from './MovieFinder.mjs';
 
 const header = '/wdd330_final_project/snippets/header.html';
@@ -16,6 +16,8 @@ inputElement.addEventListener("input", async (e) => {
     const data = await movieFinder.getInputValue();
 
     movieFinder.buildMovieSearched(data, ".movieSearchContainer");
+
+    addToWishList(".myListLink", data);
 });
 
 

@@ -159,10 +159,34 @@ Main styling small view
     height: 22px;
 }
 
+.myListBackSearch{
+    position: absolute;
+    background-color: #011822;
+    opacity: 0.3;
+    width: 100%;
+    max-width: 200px;
+    height: 22px;
+}
+
 .myListCross{
     position: absolute;
     left: 16.5em;
     font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.myListCrossSearch{
+    position: absolute;
+    font-size: 1.5em;
+    margin-left: .2em;
+    padding: 0;
+}
+
+.myListCrossDetails{
+    position: absolute;
+    left: 17.5em;
+    font-size: 1em;
     margin: 0;
     padding: 0;
 }
@@ -195,6 +219,7 @@ Main styling small view
 }
 
 .movieImgContainer{
+    position: relative;
     max-width: 300px;
     border-radius: .5em;
     text-align: center;

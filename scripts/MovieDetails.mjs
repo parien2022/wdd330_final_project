@@ -1,4 +1,4 @@
-import {creatHeaderAndFooter, getParameter} from './Functions.mjs';
+import {creatHeaderAndFooter, getParameter, addToWishListDetails} from './Functions.mjs';
 import {movieVideo, buildMovieData} from './MovieInfo.mjs';
 import MovieCatalog from './MovieCatalog.mjs';
 
@@ -21,4 +21,7 @@ const movieVideos = new MovieCatalog(url2);
 const dataVideos = await movieVideos.renderMovieContents();
 
 movieVideo(dataVideos, ".videoContainer");
+
+addToWishListDetails(".myListLink", data);
+
 

@@ -1,4 +1,4 @@
-import {creatHeaderAndFooter, setLocalStorage, getLocalStorage} from './Functions.mjs';
+import {creatHeaderAndFooter, addToWishList} from './Functions.mjs';
 import MovieCatalog from './MovieCatalog.mjs';
 
 const header = '/wdd330_final_project/snippets/header.html';
@@ -16,33 +16,6 @@ const data = allData.results;
 
 movieCatalog.buildTrendingMoviesCatalog(data);
 
+addToWishList(".myListLink", data);
 
-document.querySelectorAll(".myListLink").forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-    
-        const movieId = link.getAttribute('data-movie-id');
-
-        const wishList = getLocalStorage("wishList") || [];
-
-        
-        const movieIndex = data.findIndex((movie) => movie.id == movieId);
-        const wishData = data[movieIndex];
-
-        const movieCheck = wishList.find((movie) => movie.id == movieId);
-
-        if(!movieCheck){
-
-            wishList.push(wishData);
-            setLocalStorage("wishList", wishList);
-
-            alert(`${wishData.title} successfully added to wish list.`);
-
-        }else{
-
-            alert(`${wishData.title} is already in wish list.`);
-        }
-        
-    });
-});
 
