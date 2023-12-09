@@ -475,6 +475,10 @@ input:required:valid, textarea:required:valid{
     padding: 1em;
 }
 
+.animatedPopCornContainer{
+    display: none;
+}
+
 .animatedPopCorn{
     width: 200px;
     position: relative;

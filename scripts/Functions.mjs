@@ -116,8 +116,8 @@ function movieCheck(movieCheckValue, wishList, data){
         setLocalStorage("wishList", wishList);
 
         message = `${data.title} successfully added to wish list.`;
-        backgroundcolor = "yellowgreen";
-        color = "darkgreen";
+        backgroundcolor = "yellowgreen"
+        color = "darkgreen"
 
     }else{
 
@@ -126,11 +126,11 @@ function movieCheck(movieCheckValue, wishList, data){
         color = "darkred";
     }
 
-    displayAlert(message, backgroundcolor, color);
+    displayAlert(message, backgroundcolor, color, 3000);
 }
 
 
-export function displayAlert(message, backgroundcolor, color){
+export function displayAlert(message, backgroundcolor, color, sec){
 
     const alertTag = document.querySelector(".alert");
 
@@ -142,5 +142,5 @@ export function displayAlert(message, backgroundcolor, color){
 
     setTimeout(function (){
         alertTag.style.display = "none";
-    }, 3000);
+    }, sec);
 }

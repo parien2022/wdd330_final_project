@@ -43,6 +43,10 @@ export function removeItem(movieId, data){
 
     const movieCheck = wishList.find((movie) => movie.id == movieId);
 
+    let message = "";
+    let backgroundcolor = "";
+    let color = "";
+
     if(movieCheck){
 
         const newWishList = wishList.filter((movie) => movie.id != movieId);
@@ -51,22 +55,20 @@ export function removeItem(movieId, data){
         const movieIndex = data.findIndex((movie) => movie.id == movieId);
         const wishData = data[movieIndex];
 
-        const message = `${wishData.title} was successfully removed from wish list.`;
-        const backgroundcolor = "yellowgreen";
-        const color = "darkgreen";
+        message = `${wishData.title} was successfully removed from wish list.`;
+        backgroundcolor = "yellowgreen";
+        color = "darkgreen";
 
-        renderWishListData("wishList", ".movieWishListContainer");
-
-        displayAlert(message, backgroundcolor, color);
+        renderWishListData("wishList", ".movieWishListContainer");  
 
     }else{
 
-        const message = `Looks like ${wishData.title} is not in wish list.`;
-        const backgroundcolor = "lightcoral";
-        const color = "darkred";
-
-        displayAlert(message, backgroundcolor, color);
+        message = `Looks like ${wishData.title} is not in wish list.`;
+        backgroundcolor = "lightcoral";
+        color = "darkred";
     }
+
+    displayAlert(message, backgroundcolor, color, 3000);
 }
 
 

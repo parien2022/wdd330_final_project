@@ -1,4 +1,5 @@
 import {creatHeaderAndFooter, addToWishList} from './Functions.mjs';
+import {setUserInfo} from './MovieCatalog.mjs';
 import MovieCatalog from './MovieCatalog.mjs';
 
 const header = '/wdd330_final_project/snippets/header.html';
@@ -17,5 +18,7 @@ const data = allData.results;
 movieCatalog.buildTrendingMoviesCatalog(data);
 
 addToWishList(".myListLink", data);
+
+setUserInfo();
 
 

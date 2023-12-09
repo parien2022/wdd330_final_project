@@ -1,4 +1,4 @@
-import {getMovieApiData, setLocalStorage, getLocalStorage} from './Functions.mjs';
+import {getMovieApiData, getLocalStorage, displayAlert} from './Functions.mjs';
 
 //Using api url and parent selector builds a dynamic catalog of trending movies
 
@@ -32,5 +32,23 @@ function movieTrendingTemplate(movie) {
       const htmlItems = data.map((movie) => movieTrendingTemplate(movie));
       document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
     }
+
+  }
+
+
+  export function setUserInfo(){
+
+    const userInfo = getLocalStorage("userInfo");
+
+    if(userInfo){
+
+      const message = `${userInfo.fname} ${userInfo.lname} successfully will receive the latest movie upadate notifications to ${userInfo.email}.`;
+      const backgroundcolor = "yellowgreen";
+      const color = "darkgreen";
+
+      displayAlert(message, backgroundcolor, color, 5000);
+    }
+
+    localStorage.removeItem("userInfo");
 
   }
