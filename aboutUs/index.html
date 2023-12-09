@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,12 +7,61 @@
         <title>Movie Land Home</title>
     </head>
     <body>
-        <header class="headerTag">
+        <header>
         </header>
         <main class="mainTag">
-            <h2 class="mainTitle">About us</h2>
-            <div class="aboutUsContainer">
-
+            <h2 class="mainTitleAboutUs">About us</h2>
+            <div class="movieBannerContainer">
+                <img class="movieBannerAbout" src="../images/movie_land_banner.jpg" alt="movie land banner">
+            </div>
+            <div class="whoWeAre">
+                <h3 class="whoWeAreTitles">Who we are - Movie Land</h3>
+                <p>Welcome to YourMovieWebsite, where we bring the magic of cinema to your fingertips. We are passionate about movies and dedicated to providing you with the ultimate movie catalog experience.</p>
+                <h3 class="whoWeAreTitles">Our Mission</h3>
+                <p>At YourMovieWebsite, our mission is to be your go-to destination for discovering, exploring, and enjoying a vast collection of movies. We strive to create a platform that caters to movie enthusiasts of all tastes and preferences.</p>
+                <h3 class="whoWeAreTitles">What Sets Us Apart</h3>
+                <p>Extensive Catalog: Our curated catalog spans across genres, languages, and decades. From classic masterpieces to the latest releases, we've got it all covered.</p>
+                <p>User-Friendly Interface: We believe in simplicity and usability. Our user-friendly interface ensures that you can effortlessly navigate through our catalog, find information, and discover your next favorite movie.</p>
+            </div>
+            <div class="formContainer">
+                <form action="/wdd330_final_project/index.html">
+                    <fieldset>
+                        <div class="formDiv">
+                            <legend class="formLegend">Sign up for receiving last movies updates</legend>
+                            <label for="userFirstname" class="formLabel">First name*<input class="formInput" id="userFirstname" type="text" name="userFirstname" required></label>
+                            <label for="userLastname" class="formLabel">Last name*<input class="formInput" id="userLastname" type="text" name="userLastname" required></label>
+                            <label for="userEmail" class="formLabel">Email*<input class="formInput" id="userEmail" type="email" name="userEmail" required></label>
+                            <label for="userDescription" class="formLabel">Description<textarea class="formInput" id="userDescription" type="text" name="userDescription"></textarea></label>
+                        </div>
+                        <div class="animatedPopCornContainer">
+                            <img class="animatedPopCorn" src="../images/popcorn.png" alt="pop corn image">
+                        </div>
+                    </fieldset>
+                    <input class="formButton" type="submit" name="formButton" value="Receive updates">
+                </form>
+                
+            </div>
+            <div class="contactInfo">
+                <div class="contactInfoDivs">
+                    <h5>Contact Information</h5>
+                    <p>Email: support@movieland.com</p>
+                    <p>Phone: +1 (555) 123-4567 (Mon-Fri, 9 AM - 5 PM)</p>
+                </div>
+                <div class="contactInfoDivs">
+                    <h5>General Questions</h5>
+                    <p>Email: info@movieland.com</p>
+                </div>
+                <div class="contactInfoDivs">
+                <h5>Social Media:</h5>
+                    <p>Facebook: movieLand</p>
+                    <p>Twitter: movieLand</p>
+                    <p>Instagram: movieLand</p>
+                    <p>YouTube: movieLand</p>
+                </div>
+                <div class="contactInfoDivs">
+                    <h5>Mailing Address</h5>
+                    <p>Movie Land<br>123 Main Street<br>City, State, ZIP Code<br>Country</p>
+                </div>
             </div>
         </main>
         <footer class="footerTag">

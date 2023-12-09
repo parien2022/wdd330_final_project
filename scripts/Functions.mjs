@@ -18,8 +18,8 @@ export async function creatHeaderAndFooter(headerPath, footerPath){
     const headerTemplate = await getTemplate(headerPath);
     const footerTemplate = await getTemplate(footerPath);
 
-    const headerTag = document.querySelector(".headerTag");
-    const footerTag = document.querySelector(".footerTag");
+    const headerTag = document.querySelector("header");
+    const footerTag = document.querySelector("footer");
 
     insertionAdjacent(headerTemplate, headerTag);
     insertionAdjacent(footerTemplate, footerTag);
@@ -81,19 +81,8 @@ export function addToWishList(linkSelector, data){
           const movieIndex = data.findIndex((movie) => movie.id == movieId);
           const wishData = data[movieIndex];
   
-          const movieCheck = wishList.find((movie) => movie.id == movieId);
-  
-          if(!movieCheck){
-  
-              wishList.push(wishData);
-              setLocalStorage("wishList", wishList);
-  
-              alert(`${wishData.title} successfully added to wish list.`);
-  
-          }else{
-  
-              alert(`${wishData.title} is already in wish list.`);
-          }
+          const movieCheckValue = wishList.find((movie) => movie.id == movieId);
+          movieCheck(movieCheckValue, wishList, wishData);
           
       });
   });
@@ -101,30 +90,57 @@ export function addToWishList(linkSelector, data){
 
 
   export function addToWishListDetails(linkSelector, data){
-    document.querySelector(linkSelector).addEventListener('click', (e) => {
+        const linkPlusSelector = document.querySelector(linkSelector);
+   
+        linkPlusSelector.addEventListener('click', (e) => {
           e.preventDefault();
-      
-          const movieId = linkSelector.getAttribute('data-movie-id');
-  
+            
+          const movieId = linkPlusSelector.getAttribute('data-movie-id');
+          console.log(movieId);
+          
           const wishList = getLocalStorage("wishList") || [];
   
-          
-          const movieIndex = data.findIndex((movie) => movie.id == movieId);
-          const wishData = data[movieIndex];
   
-          const movieCheck = wishList.find((movie) => movie.id == movieId);
-  
-          if(!movieCheck){
-  
-              wishList.push(wishData);
-              setLocalStorage("wishList", wishList);
-  
-              alert(`${wishData.title} successfully added to wish list.`);
-  
-          }else{
-  
-              alert(`${wishData.title} is already in wish list.`);
-          }
-          
+          const movieCheckValue = wishList.find((movie) => movie.id == movieId);
+          movieCheck(movieCheckValue, wishList, data);
       });
+}
+
+function movieCheck(movieCheckValue, wishList, data){
+    let message = "";
+    let backgroundcolor = "";
+    let color = "";
+    if(!movieCheckValue){
+  
+        wishList.push(data);
+        setLocalStorage("wishList", wishList);
+
+        message = `${data.title} successfully added to wish list.`;
+        backgroundcolor = "yellowgreen";
+        color = "darkgreen";
+
+    }else{
+
+        message = `${data.title} is already in wish list.`;
+        backgroundcolor = "lightcoral";
+        color = "darkred";
+    }
+
+    displayAlert(message, backgroundcolor, color);
+}
+
+
+export function displayAlert(message, backgroundcolor, color){
+
+    const alertTag = document.querySelector(".alert");
+
+    alertTag.textContent = message;
+
+    alertTag.style.display = "block";
+    alertTag.style.backgroundColor = backgroundcolor;
+    alertTag.style.color = color
+
+    setTimeout(function (){
+        alertTag.style.display = "none";
+    }, 3000);
 }

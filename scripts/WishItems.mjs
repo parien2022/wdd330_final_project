@@ -1,4 +1,4 @@
-import {getLocalStorage, setLocalStorage} from './Functions.mjs';
+import {getLocalStorage, setLocalStorage, displayAlert} from './Functions.mjs';
 
 
 export function buildWishList(movie){
@@ -25,7 +25,6 @@ export function buildWishList(movie){
 export function renderWishListData(key, parentSelector){
 
     const data = getLocalStorage(key) || [];
-    console.log(data);
 
     const htmlData = data.map((movie) => buildWishList(movie));
     document.querySelector(parentSelector).innerHTML = htmlData.join("");
@@ -52,13 +51,21 @@ export function removeItem(movieId, data){
         const movieIndex = data.findIndex((movie) => movie.id == movieId);
         const wishData = data[movieIndex];
 
-        alert(`${wishData.title} was successfully removed from wish list.`);
+        const message = `${wishData.title} was successfully removed from wish list.`;
+        const backgroundcolor = "yellowgreen";
+        const color = "darkgreen";
 
         renderWishListData("wishList", ".movieWishListContainer");
 
+        displayAlert(message, backgroundcolor, color);
+
     }else{
 
-        alert(`Looks like ${wishData.title} is not in wish list.`);
+        const message = `Looks like ${wishData.title} is not in wish list.`;
+        const backgroundcolor = "lightcoral";
+        const color = "darkred";
+
+        displayAlert(message, backgroundcolor, color);
     }
 }
 

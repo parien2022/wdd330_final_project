@@ -52,4 +52,5 @@ export function buildMovieData(data, parentSelector){
     }
     const htmlItem = buildSpecificMovieData(data, newData);
     document.querySelector(parentSelector).innerHTML = htmlItem;
+    
 }
