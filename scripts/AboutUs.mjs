@@ -12,7 +12,6 @@ foromButton.addEventListener('click', getFormValues);
 function getFormValues(){
 
     const firstName = document.querySelector("#userFirstname").value;
-    console.log(firstName);
     const lastName = document.querySelector("#userLastname").value;
     const email = document.querySelector("#userEmail").value;
 
